@@ -7,21 +7,26 @@
     End Sub
 
     Private Sub SelCmdFiles_Click(sender As System.Object, e As System.EventArgs) Handles SelCmdFiles.Click
+        'Code for selecting path(s) to new command files to be uploaded to the server
         If CmdFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            'When user chooses a file or multiple files they are added to an array
             Dim SelectedCmdFiles As Array
             SelectedCmdFiles = CmdFileDialog.FileNames
-            For index = 0 To SelectedCmdFiles.GetUpperBound(0)
-                CmdFiles.AppendText(SelectedCmdFiles(index))
+            For i = 0 To SelectedCmdFiles.GetUpperBound(0)
+                'Add the file paths to the multi-ine textbox in the main form and a return for the next path
+                'The extra line at the end will be filtered out later in the main code ran for comparing the files
+                CmdFiles.AppendText(SelectedCmdFiles(i) & vbNewLine)
             Next
+            'Completed adding all selected file(s) to the multi-line textbox in the main form
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub AppNewCmd_Click(sender As System.Object, e As System.EventArgs) Handles AppNewCmd.Click
         'Main code for detecting matched files and copying data
         'Defining variables
         Dim CmdFileList As New List(Of String)
         Dim i As Integer
-        'Converting multi-line text field listing command files generated using CSpeak Command Generator
+        'Converting multi-line textbox listing command files generated using CSpeak Command Generator
         CmdFileList.AddRange(CmdFiles.Text.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
         'Looping through each new command file containing data to be copied to the server(s)
         For i = 0 To CmdFileList.Count - 1

@@ -26,7 +26,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SelCmdFiles = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.AppNewCmd = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DirPathDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.ServerPaths = New System.Windows.Forms.TextBox()
@@ -71,14 +71,14 @@ Partial Class Form1
         Me.SelCmdFiles.Text = "Select Command Files"
         Me.SelCmdFiles.UseVisualStyleBackColor = True
         '
-        'Button3
+        'AppNewCmd
         '
-        Me.Button3.Location = New System.Drawing.Point(262, 410)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(166, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Append New Commands"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.AppNewCmd.Location = New System.Drawing.Point(262, 410)
+        Me.AppNewCmd.Name = "AppNewCmd"
+        Me.AppNewCmd.Size = New System.Drawing.Size(166, 23)
+        Me.AppNewCmd.TabIndex = 6
+        Me.AppNewCmd.Text = "Append New Commands"
+        Me.AppNewCmd.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -107,7 +107,7 @@ Partial Class Form1
         Me.CmdFiles.ReadOnly = True
         Me.CmdFiles.Size = New System.Drawing.Size(667, 133)
         Me.CmdFiles.TabIndex = 10
-        Me.CmdFiles.Text = "C:\CCC-fndef-asthma-TFE.ccc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "C:\CCC-fndef-DM-2.ccc"
+        Me.CmdFiles.Text = "C:\CCC-fndef-asthma-TFE.ccc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "C:\CCC-fndef-DM-2.ccc" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'CmdFileDialog
         '
@@ -122,7 +122,7 @@ Partial Class Form1
         Me.Controls.Add(Me.CmdFiles)
         Me.Controls.Add(Me.ServerPaths)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.AppNewCmd)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.SelCmdFiles)
         Me.Controls.Add(Me.Label1)
@@ -137,7 +137,7 @@ Partial Class Form1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SelCmdFiles As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents AppNewCmd As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DirPathDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents ServerPaths As System.Windows.Forms.TextBox
