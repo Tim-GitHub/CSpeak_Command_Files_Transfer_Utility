@@ -1,7 +1,10 @@
 ﻿Public Class Form1
     Private Sub SelDirPath_Click(sender As System.Object, e As System.EventArgs) Handles SelDirPath.Click
-        DirPathDialog.Description = "Choose the directory containing your episodes."
+        'Code for selecting server path(s)
+        DirPathDialog.Description = "Choose the CLINICFOLDERNAME directory"
         If DirPathDialog.ShowDialog = DialogResult.OK Then
+            'When user chooses server path(s) they are copied to the multi-line textbox in the main form and a return for the next path
+            'The extra line at the end will be filtered out later in the main code ran for comparing the files
             ServerPaths.AppendText(DirPathDialog.SelectedPath & vbNewLine)
         End If
     End Sub
