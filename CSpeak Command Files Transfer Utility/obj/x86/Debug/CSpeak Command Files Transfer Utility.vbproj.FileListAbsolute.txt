@@ -7,3 +7,12 @@ c:\users\tim\documents\visual studio 2010\Projects\CSpeak Command Files Transfer
 c:\users\tim\documents\visual studio 2010\Projects\CSpeak Command Files Transfer Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.exe
 c:\users\tim\documents\visual studio 2010\Projects\CSpeak Command Files Transfer Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.xml
 c:\users\tim\documents\visual studio 2010\Projects\CSpeak Command Files Transfer Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.pdb
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.exe
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.xml
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.pdb
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\bin\Debug\CSpeak Command Files Transfer Utility.exe
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\bin\Debug\CSpeak Command Files Transfer Utility.pdb
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\bin\Debug\CSpeak Command Files Transfer Utility.xml
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak_Command_Files_Transfer_Utility.Form1.resources
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak_Command_Files_Transfer_Utility.Resources.resources
+C:\Users\Tim\Documents\Visual Studio 2010\Projects\CSpeak_Command_Files_Transfer_Utility\CSpeak Command Files Transfer Utility\obj\x86\Debug\CSpeak Command Files Transfer Utility.vbproj.GenerateResource.Cache
