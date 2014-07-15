@@ -29,21 +29,30 @@
         'Defining variables
         Dim CmdFileList As New List(Of String)
         Dim i As Integer
-        'Converting multi-line textbox listing command files generated using CSpeak Command Generator
+        Dim ServerPathList As New List(Of String)
+        Dim Paths As Integer
+        'Converting multi-line textbox listing command files generated using CSpeak Command Generator to list
         CmdFileList.AddRange(CmdFiles.Text.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
-        'Looping through each new command file containing data to be copied to the server(s)
-        For i = 0 To CmdFileList.Count - 1
-            'Looping through each file in the server path(s) looking for a match to the new command filename
-            For Each DestinationFile In System.IO.Directory.GetFiles(ServerPaths.Text)
-                'When a match is found the process continues
-                If System.IO.Path.GetFileName(DestinationFile) = System.IO.Path.GetFileName(CmdFileList(i)) Then
-                    MsgBox(System.IO.Path.GetFileName(DestinationFile) & System.IO.Path.GetFileName(CmdFileList(i)) & " Matches!")
-                Else
-                    'When a match is not found then the next file from the server path(s) are checked
-                End If
+        'Converting multi-line textbox listing server paths to list
+        ServerPathList.AddRange(ServerPaths.Text.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries))
+        'Looping through each server path
+        For Paths = 0 To ServerPathList.Count - 1
+            MsgBox("Scanning path: " & ServerPathList(Paths))
+            'Looping through each new command file containing data to be copied to the server
+            For i = 0 To CmdFileList.Count - 1
+                'Looping through each file in the current server path looking for a match to the current new command filename
+                For Each DestinationFile In System.IO.Directory.GetFiles(ServerPathList(Paths))
+                    'When a match is found the process continues
+                    If System.IO.Path.GetFileName(DestinationFile) = System.IO.Path.GetFileName(CmdFileList(i)) Then
+                        MsgBox("Match Found: " & System.IO.Path.GetFileName(CmdFileList(i)))
+                    Else
+                        'When a match is not found then the next file from the server path(s) are checked
+                    End If
+                Next
+                'Looping through each file on the server is complete
             Next
-            'Looping through each file on the server is complete
+            'Looping through each command filename is complete
         Next
-        'Looping through each command filename is complete
+        'Looping through each server path is complete
     End Sub
 End Class

@@ -96,7 +96,7 @@ Partial Class Form1
         Me.ServerPaths.Name = "ServerPaths"
         Me.ServerPaths.Size = New System.Drawing.Size(667, 145)
         Me.ServerPaths.TabIndex = 9
-        Me.ServerPaths.Text = "C:\CLINICFOLDERNAME1"
+        Me.ServerPaths.Text = "C:\CLINICFOLDERNAME1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "C:\CLINICFOLDERNAME2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'CmdFiles
         '
