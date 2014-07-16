@@ -45,6 +45,18 @@
                     'When a match is found the process continues
                     If System.IO.Path.GetFileName(DestinationFile) = System.IO.Path.GetFileName(CmdFileList(i)) Then
                         MsgBox("Match Found: " & System.IO.Path.GetFileName(CmdFileList(i)))
+                        MsgBox("Appending text to: " & DestinationFile)
+                        'Open the file on the server for editing
+                        Dim TextEditor As New System.IO.StreamWriter(DestinationFile, True)
+                        'Open the new command file for reading
+                        Using TextReader As New System.IO.StreamReader(CmdFileList(i), False)
+                            'Write a blank line as required by CPS to seperate the commands
+                            TextEditor.WriteLine()
+                            'Write the entire contents of the new command file to the server
+                            TextEditor.WriteLine(TextReader.ReadToEnd)
+                        End Using
+                        'Close the server file and the new command file, the text has now been added
+                        TextEditor.Close()
                     Else
                         'When a match is not found then the next file from the server path(s) are checked
                     End If
